@@ -13,12 +13,12 @@ load('SystemID_off.mat')
 load('meta.mat')
 % Simulation info:
 M = 32;  % For the last run
-lambda = 0.9995;
+lambda = 0.97;
 delta = 0.42;
 mu_LMS = 0.1;
 mu_NLMS = 0.098;
 gamma = 1e-12;
-% K = 500;
+K = 1000;
 N = 4;
 normH = 1;
 SNR = [-3 3 10 15];

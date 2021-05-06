@@ -12,14 +12,14 @@ Adders_max = 32;  % Max number of bits in the approximation
 N = 4;  % Max number of coefficients in the filters
 H_dummy = randn(N, 1);
 H = H_dummy./norm(H_dummy);  % Unknown system
-lambda = .998;  % Forgeting factor
+lambda = .97;  % Forgeting factor
 delta = .42;  % small const. to initialize the Hermitian
 mu_LMS = .1;  % step size for the LMS filter
 mu_NLMS = .098;  % step size for the NLMS filter
 gamma = 1e-12;  % Small constant to avoid singularity
 
-K = 500;  % No. iterations
-ensemble = 10;  % Monte Carlo ensemble
+K = 1000;  % No. iterations
+ensemble = 100;  % Monte Carlo ensemble
 
 save('meta.mat', 'lambda', 'delta', 'mu_*', 'gamma', 'K', 'Adders_max')
 
